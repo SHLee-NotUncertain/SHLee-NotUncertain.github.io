@@ -1,6 +1,12 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+
+  {% comment %}<!-- 동적 카테고리 사이드바 자동 표시 -->{% endcomment %}
+  {% if page.show_category_sidebar != false %}
+    {% include sidebar-categories.html %}
+  {% endif %}
+
   {% if page.sidebar %}
     {% for s in page.sidebar %}
       {% if s.image %}

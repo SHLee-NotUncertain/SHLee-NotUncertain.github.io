@@ -2,4 +2,57 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<!-- Custom styles for category accordion -->
+<style>
+.category-accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-accordion details {
+  margin-bottom: 0.5em;
+}
+
+.category-accordion summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5em 0;
+  list-style: none;
+  user-select: none;
+}
+
+.category-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.category-accordion summary::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.category-accordion details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.category-accordion .tag-list {
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+  list-style: none;
+  padding-left: 0;
+}
+
+.category-accordion .tag-list li {
+  padding: 0.25em 0;
+  font-size: 0.9em;
+}
+
+.category-accordion .category-link {
+  display: block;
+  padding: 0.25em 0;
+  margin-left: 1.5em;
+}
+</style>
+
 <!-- end custom head snippets -->
