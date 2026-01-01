@@ -26,5 +26,16 @@
     </h2>
     {% include page__meta.html type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    {% if post.tags and post.tags.size > 0 %}
+      {% assign tags_sorted = post.tags | sort_natural %}
+      <p class="page__taxonomy">
+        <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label | default: "Tags:" }} </strong>
+        <span itemprop="keywords">
+        {% for tag_word in tags_sorted %}
+          <a href="{{ site.baseurl }}/tags/#{{ tag_word | slugify }}" class="page__taxonomy-item p-category" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+        {% endfor %}
+        </span>
+      </p>
+    {% endif %}
   </article>
 </div>

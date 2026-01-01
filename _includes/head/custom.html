@@ -4,6 +4,63 @@
 
 <!-- Custom styles for category accordion -->
 <style>
+/* Font Size Adjustments */
+.archive__item-title {
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-bottom: 0.4em;
+}
+
+.archive__item-excerpt {
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+
+.page__meta {
+  font-size: 0.75em;
+}
+
+.page__taxonomy {
+  font-size: 0.75em;
+  margin-top: 0.4em;
+}
+
+.page__content {
+  font-size: 0.9em;
+}
+
+body {
+  font-size: 15px;
+}
+
+/* Sidebar and Main Content Ratio (30:70) */
+.sidebar.sticky {
+  width: 25%;
+}
+
+@media (min-width: 64em) {
+  .sidebar.sticky {
+    width: calc(25% - 1em);
+  }
+
+  .page__content,
+  .archive {
+    width: calc(75% - 1em);
+  }
+}
+
+/* Archive item spacing */
+.archive__item {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.list__item .archive__item {
+  width: 100%;
+}
+
+/* Category Accordion Styles */
 .category-accordion {
   margin: 0;
   padding: 0;
@@ -53,6 +110,24 @@
   padding: 0.25em 0;
   margin-left: 1.5em;
 }
+
 </style>
+
+<!-- MathJax Configuration -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <!-- end custom head snippets -->
