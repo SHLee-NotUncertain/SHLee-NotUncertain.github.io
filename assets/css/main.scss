@@ -23,3 +23,23 @@ search: false
     font-size: 0.9em !important;
   }
 }
+
+/* Archive list item styles - smaller font sizes */
+.list__item {
+  .archive__item-excerpt {
+    font-size: 0.5em !important;
+  }
+
+  .page__meta {
+    font-size: 0.5em !important;
+  }
+
+  .page__taxonomy {
+    font-size: 0.5em !important;
+  }
+}
+
+/* Archive page title - smaller heading */
+.archive .page__title {
+  font-size: 1.5em !important;
+}

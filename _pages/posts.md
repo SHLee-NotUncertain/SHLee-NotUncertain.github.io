@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "전체 게시글"
+title: "All Posts"
 permalink: /posts/
 author_profile: true
 ---

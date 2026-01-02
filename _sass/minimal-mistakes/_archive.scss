@@ -52,6 +52,7 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
+  font-size: $type-size-6;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,7 +78,7 @@
 
 .archive__item-excerpt {
   margin-top: 0;
-  font-size: $type-size-6;
+  font-size: 0.35em;
 
   & + p {
     text-indent: 0;
@@ -130,7 +131,11 @@
 .list__item {
   .page__meta {
     margin: 0 0 4px;
-    font-size: 0.6em;
+    font-size: 0.35em;
+  }
+
+  .page__taxonomy {
+    font-size: 0.35em;
   }
 }
 
