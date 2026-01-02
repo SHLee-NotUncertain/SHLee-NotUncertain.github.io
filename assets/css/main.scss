@@ -7,3 +7,19 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom styles - Ensure consistent font size for all text */
+.page__content,
+.archive {
+  ul, ol {
+    font-size: 0.9em !important;
+  }
+
+  ul li, ol li {
+    font-size: 0.9em !important;
+  }
+
+  p {
+    font-size: 0.9em !important;
+  }
+}
